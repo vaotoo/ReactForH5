@@ -1,0 +1,85 @@
+{
+    // TypeScript编译选项
+    // https://www.tslang.cn/docs/handbook/compiler-options.html
+    "compilerOptions": {
+        // 指定 ECMAScript 目标版本: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'
+        "target": "ES2015",
+        // 指定生成哪个模块系统代码： "None"， "CommonJS"， "AMD"， "System"， "UMD"， "ES6" 或 "ES2015"。 
+        // 只有 "AMD"和 "System"能和 --outFile一起使用。 
+        // "ES6"和 "ES2015"可使用在目标输出为 "ES5"或更低的情况下。
+        // ESNext 是一个 JavaScript 库，可以将 ES6 草案规范语法转成 JavaScript 语法
+        "module": "ESNext",
+        // 允许编译javascript文件
+        "allowJs": true,
+        // 在 .js 文件中报告错误。与 --allowJs 配合使用。
+        "checkJs": true,
+        // 在 .tsx 文件里支持JSX： "React"或 "Preserve"
+        "jsx": "react",
+        // 生成相应的 .map文件
+        "sourceMap": true,
+        // 重定向输出目录
+        "outDir": "./dist/assets/",
+        // 删除所有注释，除了以 /!* 开头的版权信息。
+        "removeComments": true,
+        // 从 tslib 导入辅助工具函数（比如 __extends， __rest等）
+        "importHelpers": true,
+        // 启用所有严格类型检查选项。 
+        // 启用 --strict 相当于启用 --noImplicitAny、--noImplicitThis、--alwaysStrict、--strictNullChecks
+        // 和 --strictFunctionTypes、--strictPropertyInitialization。
+        "strict": true,
+        // 在表达式和声明上有隐含的 any类型时报错。
+        "noImplicitAny": false,
+        // 在严格的 null检查模式下， null和 undefined值不包含在任何类型里
+        // 只允许用它们自己和 any来赋值（有个例外， undefined可以赋值到 void）
+        "strictNullChecks": true,
+        // 禁用函数参数双向协变检查
+        "strictFunctionTypes": true,
+        // 以严格模式解析并为每个源文件生成 "use strict"语句
+        "alwaysStrict": true,
+        // 决定如何处理模块。或者是"Node"对于Node.js/io.js，或者是"Classic"（默认）
+        "moduleResolution": "node",
+        // 解析非相对模块名的基准目录
+        "baseUrl": "./",
+        // 模块名到基于 baseUrl的路径映射的列表
+        "paths": {
+            "*": [
+                "*",
+                "src/*"
+            ],
+            "@utils/*": [
+                "./src/utils/*"
+            ],
+            "@pages/*": [
+                "./src/pages/*"
+            ],
+            "@components/*": [
+                "./src/components/*"
+            ],
+            "@globalModels/*": [
+                "./src/models/*"
+            ],
+            "@globalServices/*": [
+                "./src/services/*"
+            ]
+        },
+        // 根（root）文件夹列表，表示运行时组合工程结构的内容
+        "rootDirs": [
+            "./src"
+        ],
+        // 要包含的类型声明文件名列表
+        "types": [
+            "node"
+        ],
+        // 允许从没有设置默认导出的模块中默认导入。这并不影响代码的输出，仅为了类型检查。
+        "allowSyntheticDefaultImports": true,
+        // 启用实验性的ES装饰器
+        "experimentalDecorators": true,
+        // 给源码里的装饰器声明加上设计类型元数据
+        "emitDecoratorMetadata": true
+    },
+    // 包含的文件
+    "include": [
+        "./src/",
+        "./declaration.d.ts"
+    ]
+}

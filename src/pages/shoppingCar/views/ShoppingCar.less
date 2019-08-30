@@ -1,0 +1,109 @@
+.shoppingCarContent {
+
+    .listBox {
+        margin-top: -1px;
+        padding-bottom: 50px;
+
+        .listItem {
+            .main {
+                height: 100px;
+                display: flex;
+
+                p {
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .image {
+                    width: 100px;
+                    min-width: 100px;
+                    height: 100px;
+                    background: url(./img/product1.jpg) center center no-repeat;
+                    background-size: cover;
+                    border-radius: 5px;
+                }
+
+                .point {
+                    width: 100%;
+                    line-height: 30px;
+                    padding-left: 10px;
+                    position: relative;
+                    z-index: 1;
+                    overflow: hidden;
+
+                    .title {
+                        font-size: 16px;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        word-break: break-all;
+                        overflow: hidden;
+                    }
+
+                    .price {
+                        color: #f00;
+                        text-align: right;
+                    }
+                }
+            }
+
+            .actionList {
+                line-height: 50px;
+                font-size: 14px;
+                padding-top: 5px;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+
+                :global {
+                    .am-button {
+                        color: #666;
+                    }
+                }
+            }
+        }
+
+        .empty {
+            line-height: 50px;
+
+            :global {
+                .iconfont {
+                    margin-right: 5px;
+                }
+
+                .am-list-content {
+                    color: #999;
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .buttonList {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        position: fixed;
+        bottom: 60px;
+        z-index: 2;
+
+        .carButton {
+            &:first-child {
+                background-color: #f90;
+            }
+
+            &:last-child {
+                background-color: #ccc;
+            }
+
+            color: #fff;
+            font-size: 14px;
+            width: 50%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+    }
+}

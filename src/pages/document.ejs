@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<% var title = context.config.plugins[0][1].title.defaultTitle; %>
+<% var version = new Date().getTime(); %>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="description" content="<%= title %>">
+    <meta name="keyword" content="<%= title %>">
+    <link rel="stylesheet" href="<%= context.publicPath %>iconfont/iconfont.css?v=<%= version %>" />
+    <link rel="shortcut icon" href="<%= context.publicPath %>img/favicon.png?v=<%= version %>" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript">
+        alert('请升级您的浏览器~');
+        location.href = 'https://www.baidu.com/s?wd=%E6%B5%8F%E8%A7%88%E5%99%A8';
+    </script>
+    <![endif]-->
+    <title><%= title %></title>
+</head>
+
+<body id="document">
+    <div id="root">
+        <div style="color:#ccc;height:300px;line-height:300px;margin:auto;text-align:center;">
+            <span style="font-size:20px;">加载中...</span>
+        </div>
+    </div>
+</body>
+
+</html>
