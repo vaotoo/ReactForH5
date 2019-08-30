@@ -7,7 +7,6 @@ export default Object.assign({
         ['umi-plugin-react', {
             antd: true,
             fastClick: true,
-            hardSource: true,
             title: {
                 defaultTitle: '请自行设置默认标题',
                 separator: '-'
